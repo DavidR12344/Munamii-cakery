@@ -1,12 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
+    width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    max-width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #191919;
 }
 
 header {
     background-color: black;
     padding: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 header h1 {
@@ -33,6 +41,48 @@ nav ul li a:hover {
     color: #666;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adjust as needed */
+}
+
+#home-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Example styling for left and right content */
+#home-layout .left {
+    position: relative;
+    flex-basis: 50%;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+#home-layout .left img {
+    width: 100%;
+    display: block;
+    border-radius: 8px; /* Adjust as needed */
+    margin-bottom: 20px; /* Add spacing between image and content */
+}
+
+#home-layout .right {
+    flex-basis: 50%;
+    margin-left: 10px;
+}
+
+
+
+#home-layout .right img {
+    width: 100%;
+    display: block;
+    border-radius: 8px; /* Adjust as needed */
+    margin-bottom: 20px; /* Add spacing between image and content */
+}
 
 main {
     padding: 20px;
@@ -70,7 +120,6 @@ section {
     width: 100%;
     border-radius: 8px;
 }
-
 
 footer {
     background-color: #efefef;
@@ -134,7 +183,6 @@ footer {
     color: #1a7ac4;
     transition: color .12s ease-out 0s;
 }
-
 
 .logo {
     font-size: 14px;
