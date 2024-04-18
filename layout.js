@@ -8,7 +8,8 @@ window.addEventListener('DOMContentLoaded', function() {
         { id: 'header', path: '../components/header.html' },
         { id: 'footer', path: '../components/footer.html' },
         { id: 'about-layout', path: '../about/about.html' },
-        { id: 'contact-layout', path: '../contact/contact.html' }
+        { id: 'contact-layout', path: '../contact/contact.html' },
+        {id: 'products-layout', path: '../product/product.html'}
     ];
 
     // Fetch and display each component

@@ -72,7 +72,7 @@ if (window.location.pathname.includes("detailed.html")) {
         displayProductDetails(productDetails);
     } else {
         // Product not found, redirect to homepage
-        window.location.href = "index.html";
+        window.location.href = "../home/home.html";
     }
 }
 
