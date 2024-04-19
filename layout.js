@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
         { id: 'footer', path: '../components/footer.html' },
         { id: 'about-layout', path: '../about/about.html' },
         { id: 'contact-layout', path: '../contact/contact.html' },
+        { id: 'channels', path: '../components/channels.html' },
         {id: 'products-layout', path: '../product/product.html'}
     ];
 

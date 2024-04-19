@@ -1,14 +1,14 @@
 
-   // Mock data for cupcakes
+// Mock data for cupcakes
 const cupcakes = [
-    { id: 1, title: "Caja 12 cupcakes", price: "$20.00", image: "cupcakes1.jpg" },
-    { id: 2, title: "Caja 12 cupcakes Dia de la Madre", price: "$20.00", image: "cupcakes2.jpg" },
-    { id: 3, title: "Caja 4 cupcakes", price: "$12.00", image: "cupcakes3.jpg" },
-    { id: 4, title: "Caja 6 cupcakes", price: "$15.00", image: "cupcakes4.jpg" },
+    { id: 1, title: "Caja 12 Cupcakes", price: "$20.00", image: "cupcakes1.jpg" },
+    { id: 2, title: "Caja 12 Cupcakes Dia de la Madre", price: "$20.00", image: "cupcakes2.jpg" },
+    { id: 3, title: "Caja 4 Cupcakes", price: "$12.00", image: "cupcakes3.jpg" },
+    { id: 4, title: "Caja 6 Cupcakes", price: "$15.00", image: "cupcakes4.jpg" },
     { id: 5, title: "Caja 1 Cupcake Dia de la Madre", price: "$2.50", image: "cupcakes5.jpg" },
-    { id: 6,title: "Caja 12 cupcakes", price: "$20.00", image: "cupcakes5.jpg"},
-    { id: 7, title: "Caja 12 cupcakes", price: "$20.00", image: "cupcakes5.jpg"},
-    { id: 8, title: "Caja 12 cupcakes", price: "$20.00", image: "cupcakes1.jpg" },
+    { id: 6, title: "Caja 6 Cupcake vanilla", price: "$10.00", image: "cupcakes6.jpg" },
+    { id: 7, title: "Caja 7 Cupkake", price: "$22.00", image: "cupcakes7.jpg" },
+    { id: 8, title: "Caja 8 Cupcakes", price: "$25.00", image: "cupcakes8.jpg" },
 ];
 
 // Mock data for wedding cakes
@@ -18,8 +18,8 @@ const weddingCakes = [
     { id: 3, title: "Torta Belén", price: "$25.00", image: "weddingcakes3.jpg" },
     { id: 4, title: "Torta Gabriela", price: "$35.00", image: "weddingcakes4.png" },
     { id: 5, title: "Torta Jack", price: "$35.00", image: "weddingcakes5.png" },
-    { id: 6,title: "Torta Flork San Valentín", price: "$20.00", image: "weddingcakes6.png"},
-    { id: 7, title: "Torta Kitty Cat", price: "$35.00", image: "weddingcakes7.png"},
+    { id: 6, title: "Torta Flork San Valentín", price: "$20.00", image: "weddingcakes6.png" },
+    { id: 7, title: "Torta Kitty Cat", price: "$35.00", image: "weddingcakes7.png" },
     { id: 8, title: "Verónica", price: "$35.00", image: "weddingcakes8.png" },
     // Add more wedding cakes here
 ];
@@ -48,15 +48,14 @@ function createProductElement(product) {
         <p>${product.price}</p>
         <button class="details-button" data-id="${product.id}">Köp nu</button>
     `;
-    productElement.querySelector('.details-button').addEventListener('click', function() {
+    productElement.querySelector('.details-button').addEventListener('click', function () {
         // Redirect to detailed.html with the product ID as a query parameter
-        window.location.href = `detailed.html?id=${product.id}`;
+        window.location.href = `detail.html?id=${product.id}`;
     });
     return productElement;
 }
 
-// If detailed page
-if (window.location.pathname.includes("detailed.html")) {
+if (window.location.pathname.endsWith("/detail/detail.html")) {
     // Extract product ID from query parameter
     const urlParams = new URLSearchParams(window.location.search);
     const productId = parseInt(urlParams.get('id'));
@@ -75,6 +74,7 @@ if (window.location.pathname.includes("detailed.html")) {
         window.location.href = "../home/home.html";
     }
 }
+
 
 // Function to display product details on detailed.html
 function displayProductDetails(product) {
