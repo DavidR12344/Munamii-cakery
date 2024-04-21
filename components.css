@@ -66,6 +66,20 @@
     cursor: pointer;
 }
 
+.home-description {
+   padding-top: 20px;
+   font-size: 18px;
+   
+}
+
+.home-description p {
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+
+}
+
 .avatar img {
     width: 144px;
     height: 144px;
